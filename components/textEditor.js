@@ -1,9 +1,4 @@
 import React from 'react';
-// import brace from 'brace';
-// import 'brace/mode/javascript';
-// // import 'brace/mode/c_cpp';
-// import 'brace/theme/twilight';
-// import 'brace/theme/xcode';
 import AceEditor from 'react-ace';
 
 const TextEditor = (props) => (
@@ -14,13 +9,24 @@ const TextEditor = (props) => (
       onChange={props.onChange}
       name="UNIQUE_ID_OF_DIV"
       editorProps={{
-        $blockScrolling: Infinity // Use Infinity instead of true
+        $blockScrolling: Infinity 
+        // Use Infinity instead of true
       }}
+      showPrintMargin={false}
       fontSize={21}
       height='80vh'
-      width='100%'
+      wrapEnabled={true}
+      width='90%'
       setOptions={{
-        useWorker: false // Disable worker to prevent the 'ace is not defined' error
+        useWorker: false,
+        wrap: true, // Enable text wrapping
+        maxLines: Infinity,  // this is going to be very slow on large documents
+        useWrapMode: true,   // wrap text to view
+        indentedSoftWrap: false, 
+        behavioursEnabled: false, // disable autopairing of brackets and tags
+        showLineNumbers: false, // hide the gutter
+        theme: "ace/theme/xcode"
+         // Disable worker to prevent the 'ace is not defined' error
       }}
     />
   </div>
