@@ -68,6 +68,7 @@ const CodeEditor = () => {
         editorProps={{ $blockScrolling: true }}
         height="300px"
         width="100%"
+        showPrintMargin={false}
       />
     </>
   );
