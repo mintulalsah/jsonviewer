@@ -1,0 +1,26 @@
+/* CsvViewer.css */
+
+.csv_viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .csv_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .csv_table th,
+  .csv_table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .csv_table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
