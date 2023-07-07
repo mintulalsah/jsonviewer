@@ -105,13 +105,13 @@ const CodeEditor = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box display="flex" gap={1}>
+      <Box display="flex" gap={1} sx={{padding:1}}>
       {buttonList.map((buttonText, index) => (
-        <Typography key={index}>
-          <Typography variant="outlined" onClick={() => handleClick(buttonText)}>
+       
+          <Typography  className={styles.buttons} key={index} variant="outlined" onClick={() => handleClick(buttonText)}>
             {buttonText}
           </Typography>
-        </Typography>
+       
       ))}
     </Box>
 {/* <Ace mode="json"  theme="xcode"  /> */}

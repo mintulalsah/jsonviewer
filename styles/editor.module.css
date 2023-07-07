@@ -1,3 +1,15 @@
 .editor_border{
     border: 2px solid #f0f0ff;
 }
+.buttons {
+    font-weight: 700;
+    /* padding-right: 10px; */
+    margin-right: 10px;
+    padding: 10px 24px;
+    color: aliceblue;
+    background-color: #29c493;
+    /* #29c493 */
+    /* //#e737c8 */
+    border-radius: 10px;
+    cursor: pointer !important;
+}
