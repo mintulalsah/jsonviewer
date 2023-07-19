@@ -13,3 +13,268 @@
     border-radius: 10px;
     cursor: pointer !important;
 }
+
+
+
+Declaring Custom Properties
+
+
+/* Setting fallback defaults for IE */
+/* html {
+    font: 1em/1.5 'Avenir Next', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    text-rendering: optimizelegibility;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: #fafbfc;
+    color: #232425;
+} */
+/* body, button, input, optgroup, select, textarea {
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+} */
+/* body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+} */
+
+/* body * {
+    box-sizing: border-box;
+} */
+
+
+/* Remove the 300ms tap-delay */
+
+.atag {
+    color: cornflowerblue;
+    transition: color .3s;
+}
+
+.atag:hover,
+.atag:focus {
+    color: forestgreen;
+}
+
+.atag:active {
+    color: tomato;
+}
+
+.h1 {
+    font-size: 2em;
+}
+
+.h2 {
+    font-size: 1.25em;
+}
+
+.h3 {
+    font-size: 0.75em;
+}
+
+.h4 {
+    font-size: 0.50em;
+    text-transform: uppercase;
+}
+
+.h5 {
+    font-size: 0.25em;
+}
+
+.h6 {
+    font-size: 0.25em;
+    text-transform: uppercase;
+}
+
+.p {
+    font-size: 1.125em;
+    margin: 0;
+}
+
+
+
+.code {
+    padding: .125em;
+    background: #edefec;
+    color: black;
+}
+
+.img {
+    height: auto;
+    max-height: 550px;
+    max-width: 100%;
+}
+
+/* Header */
+.header {
+    font-family: Palatino, Georgia, 'Times New Roman', serif !important;
+    padding: 1.5em !important;
+    background: burlywood !important;
+}
+
+
+
+/* main_div */
+.main_div {
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    display: block !important; /* IE */
+    margin: 4em auto !important;
+    max-width: 50em !important;
+    padding: 10px !important;
+}
+
+
+/* Modern Browsers get custom properties to play with. */
+@supports(--font: 1em) {
+   
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    .strong,
+    .th {
+        font-weight: 600 !important;
+    }
+    
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        line-height: 1.1 !important;
+    }
+    
+    .h6 {
+        font-size: var(--font-size) !important;
+    }
+    
+    .atag {
+        color: cornflowerblue !important;
+    }
+
+    .atag:hover,
+    .atag:focus {
+        color: forestgreen;
+    }
+
+    .atag:active {
+        color: tomato;
+    }
+    
+    /**
+     * Header
+     */
+    .header {
+        font-family: var(--font-serif);
+        /* --background: burlywood; */
+        background-color: #fafbfc;
+    }
+    
+    /* main_div */
+    .main_div {
+        max-width: 50em;
+    }
+    
+   
+}
+
+@supports(grid-gap: 1em) {
+ 
+    
+    .header .h1 {
+        grid-column: 3 / -1;
+    }
+    
+    .header .p {
+        grid-column: 4 / -1;
+    }
+    
+    .header,
+   
+    
+    .main_div {
+        grid-column: 1 / -1;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .article {
+        display: grid;
+        grid-row-gap: 1.5em;
+        grid-template-columns: repeat(16, 1fr);
+    }
+    
+    .article > * {
+        grid-column: 4 / 12;
+        margin: 0;
+    }
+    
+    
+    
+    .article .introduction {
+        font-size: 1.25rem;
+        display: grid;
+        grid-row-gap: 1.5em;
+        grid-column: 2 / span 8;
+        margin-bottom: 3em;
+    }
+    
+    .introduction > * {
+        margin: 0;
+    }
+    
+   
+    
+   
+    @media (max-width: 75em) {
+    
+         
+        .article > * {
+            grid-column: 4 / -4;
+        }
+        
+        .article .introduction {
+            font-size: 1.125rem;
+            grid-column: 2 / -4;
+        }
+     
+        
+        .img {
+            grid-column: 1 / -1;
+        }
+        
+      
+    }
+    
+    @media (max-width: 60em) {
+        .header .h1,
+        .header .p {
+            grid-column: 1 / -1;
+            /* color: red; */
+        }
+        
+        
+    }
+    
+    @media (max-width: 50em) {        
+        .article > * {
+            grid-column: 2 / -2;
+        }
+        
+       
+    }
+    
+    @media (max-width: 40em) {
+     
+        
+        .header .h1 {
+            font-size: 2.25em;
+        }
+    }
+    
+    @media (max-width: 30em) {
+        .header h1 {
+            font-size: 1.75em;
+        }
+    }
+}
