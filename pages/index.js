@@ -7,6 +7,7 @@ import { Box, Typography } from "@mui/material";
 import styles from '../styles/editor.module.css';
 import { JSONTree } from "react-json-tree";
 import Head from "next/head";
+import imagepaths from "@/public/imagepaths";
 const AceEditor = dynamic(
   async () => {
     const ace = await import('react-ace');
@@ -79,16 +80,16 @@ const IndexPage = () => {
   return (
     <>
       <Head>
-        <title>JSON Formatter Online</title>
+        <title>Online JSON Viewer</title>
   <meta
     name="description"
-    content="JSON Formatter Online - Format your JSON code with our free online JSON Formatter tool to get readable JSON data"
+    content="Online JSON Viewer- Simplify Your JSON data with JSON Viewer tool"
   />
   <meta
     name="keywords"
-    content="json formatter online,format json online, json format online"
+    content="Online JSON Viewer, JSON Viewer"
   />
-  <link rel="canonical" href="https://jsonformatteronline.com/" />
+  <link rel="canonical" href="https://onlinejsonviewer.com/" />
   <meta name="robots" content="index,follow" />
   <meta charSet="UTF-8" />
   <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -114,9 +115,6 @@ const IndexPage = () => {
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
-  {/* <link rel="stylesheet" href="css/blog.css" /> */}
-
-
       </Head>
       <Box display="flex" gap={1} sx={{padding:1}}>
       {buttonList.map((buttonText, index) => (
@@ -127,7 +125,7 @@ const IndexPage = () => {
     
    ))}
     </Box>
-{/* <Ace mode="json"  theme="xcode"  /> */}
+
 {activeComponent === 'Format' && 
 <AceEditor
 // style={{ borderTop: '10px solid red',borderBottom: '10px solid #f0f0f',borderRight: '10px solid #f0f0f' }}
@@ -152,121 +150,81 @@ const IndexPage = () => {
 {/* blog content */}
 
   <header className={styles.header}>
-    <h1 className={styles.h1}>JSON Formatter Online</h1>
-    <p>(with a best editor tool)</p>
+    <h1 className={styles.h1}>Online JSON Viewer</h1>
+    <p className={styles.p}>(with a best json tree viewer)</p>
   </header>
   <main role="main" className={styles.main_div}>
     <article>
       <section className={styles.introduction}>
-        <h2 className={styles.h2}>What is JSON and how JSON Formatter Online work ?</h2>
-        <p>
-          JSON i.e. Javascript object notation, is a lightweight data
-          interchange format which is commonly used to transmit data between
-          server and web or mobile application, or between different parts of
-          Softwares.
+      <p className={styles.p}>
+        An online JSON viewer is a json tree viewer tool that allows developers to fast visualise and analyse JSON information in a human-readable format. It offers a smooth interface for you to find, sort, and explore JSON objects values associated with keys. Using the online JSON viewer, you may effortlessly recognize the structure of your JSON key and their value, that is specifically helpful while dealing with big or nested data.
         </p>
-        <p>
-          JSON data is easy for humans to read and write. JSON is basically
-          based on Javascript programming language, but it is compatible with
-          another language as well because it is language independent format. in
-          this blog will tell how to do JSON Formatter Online.
-        </p>
+       
       </section>
   
-      <p>And now for something completely different!</p>
-
-      <h3 className={styles.h3}>Text on the Web</h3>
-      <p>
-        Text is the most accessible format for information on the web. Screen
-        readers understand text best and the same applies to most assistive
-        technology, such as translation apps and Braille displays. So, if you
-        have anything on your webpage that’s not text, you must add some text
-        that gives your user the same information.
-      </p>
-      <p>
-        The only exception from the rule is decoration, formatting and invisible
-        content: if non-text content is pure decoration, is used only for visual
-        formatting or is not presented to users, then it must be implemented in
-        a way that it can be ignored by assistive technology.
-      </p>
+     
+      <h2 className={styles.h2}>Key Features and Benefits</h2>
+      
      
    
-      <h3 className={styles.h3}>lang-Attribute</h3>
-      <p>
-        Always add a <code className={styles.code}></code> on your <code className={styles.code}></code>
-        element in order to make screen reader software read the text on the
-        page in the correct language. Remember to set the ISO_639-1 language
-        code (e.g.: de, en, fr, es, it) while making sure that, if the language
-        for your website changed globally (i.e.: someone clicked on a link
-        inside a language navigation) you need to replace the value dynamically.
-      </p>
-      <p>
-        If parts of a website are written in a different language, set the same
-        attribute with the correct language code on the parent element.
-        Wikipedia, for example, almost always provides translations to articles
-        created and links to those translations in their sidebar. Each link text
-        is already translated into the language the article linked to will be.
-        So, each link in the Wikipedia Translations Navigation has a
-        lang-Attribute.
-      </p>
-      <p>
-        <strong>Note:</strong> {"don't mistake"} <code className={styles.code}>hreflang</code> for something
-        alike because that attribute is only relevant for crawlers/SEO. It has
-        nothing to do with accessibility.
+      <h3 className={styles.h3}>Visual Representation:</h3>
+      <p className={styles.p}>
+      The primary benefit of using an online JSON viewer is to make JSON data in a structured and readable manner. Instead of dealing with raw JSON strings, this tool will  display the data as a hierarchical tree or a formatted table, making it easier to read your key value and check how many keys are present in each of your objects or inside the array.
       </p>
      
-      <h3 className={styles.h3}>Landmarks</h3>
-      <p>
-        As a sighted user, when we land on a webpage, we scan the content and
-        seek for the most relevant part regarding our own interests – then we
-        start from there and navigate around the page and/or website. Landmarks
-        provide users of assistive technology with means to first scan and then
-        navigate webpages. By pressing combinations of keys the user can jump
-        around the DOM and set focus to those elements.
+     
+      <h3 className={styles.h3}>Syntax Highlighting:</h3>
+      <p className={styles.p}>
+      JSON viewer tools have features of highlighting key, meaning it will highlight different data types, key value pairs with different colors to analyse key- value is more efficient, This tool feature will help developers to easily see if there are any errors in your json data.
       </p>
-      <p>
-        {"There'sa wonderful"}{" "}
-        <a className={styles.atag} href="http://matatk.agrip.org.uk/landmarks/">browser extension</a>,
-        which gives you access to those landmarks and enables you to jump
-        through them, just like with assistive technology.
-      </p>
+    
     
       <figure>
-        <img className={styles.img}
-          src="https://picsum.photos/2509/1673?image=600"
-          alt="A man with a hooded sweater standing in the woods"
-        />
-      </figure>
+              <img className={styles.img}
+                src={imagepaths.raw_json}
+                alt="Online Json Viewer"
+              />
+               <p className={styles.p}>
+      when you clcik on json tree viewer - 
+      </p>
+            </figure>
+            <figure>
+              <img className={styles.img}
+                src={imagepaths.json_tree_view}
+                alt="Json tree Viewer"
+              />
+              
+            </figure>
     
-      <h3 className={styles.h3}>Skiplinks</h3>
-      <p>
-        While landmarks are great for users with assistive technology at their
-        hands, sighted keyboard users do not have any means to jump over
-        headers, navigations and any other elements between the start of the DOM
-        tree and the precious content they came to your site for. For them,
-        {"there's"} skip links.
+      <h3 className={styles.h3}>Collapsible and Expandable Nodes:</h3>
+      <p className={styles.p}>
+      After clicking on the json viewer you can collapse and expand any json object or array to focus on where you have i.e focus on a particular key object. By collapsing nested objects or arrays, developers can focus on specific parts of the JSON data, reducing visual clutter and enhancing data analysis.
+
       </p>
-      <p>
-        By repeatedly hitting the <code className={styles.code}>Tab</code> key, a user sets focus to the
-        focusable elements in a webpage. Setting focus on a skip link should
-        reveal it if it is hidden in the first place! Skip links should be the
-        first elements of your HTML document. Depending on your page structure
-        you might need more than just one.
+      <figure>
+              <img className={styles.img}
+                src={imagepaths.expanded}
+                alt="Json Viewer"
+              />
+              
+            </figure>
+      <h3 className={styles.h3}>JSON Data Validation:</h3>
+      <p className={styles.p}>
+      Our online JSON viewer tool can validate your JSON data, It required when we are creating API or when working with data received from APIs to integrate with UI it helps us to validate whether JSON is coming correct data or not.
       </p>
-      <h4>An Example for Skiplinks</h4>
-      <p>
-        You provide users with a navigation, a site-search, an index navigation
-        and a main content area. In any case, you should at least have a skip
-        link pointing at the main content! Always! It also makes sense to have a
-        skip link pointing at the site search, as experienced (repeating)
-        visitors to your website might prefer to search for what they came
-        looking for instead of moving from page to page.
-      </p>
-      <p>
-        <strong>Note:</strong> all this advice about skip links is depending on
-        your {"site's"} structure and, foremost, on your users’ needs!
+      <h3 className={styles.h3}>We support URL Integration:</h3>
+      <p className={styles.p}>
+      We have given feature that you can fetch your JSON data from external sources as well and see your JSON data online without having to copy and paste the data into the viewer
+       </p>
+       <h3 className={styles.h3}>Conclusion:</h3>
+      <p className={styles.p}>
+      The online JSON viewer tool is very useful for developers who work with JSON data while fetching data from APIs integration in our software. Its user-friendly interface, with highlighting syntax, error detection and understanding JSON objects. By using an online JSON viewer, developers can save time.
       </p>
      
+
+      <p className={styles.p}>
+      So why are you struggling with raw JSON strings analysing your data with an online JSON viewer? Try today and experience the ease of JSON parsing Happy coding!
+     </p>
     </article>
   </main>
 </>

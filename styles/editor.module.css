@@ -1,6 +1,11 @@
 .editor_border{
     border: 2px solid #f0f0ff;
 }
+
+.tree_viewer{
+    /* border: 2px solid #f0f0ff; */
+   
+}
 .buttons {
     font-weight: 700;
     /* padding-right: 10px; */
@@ -15,33 +20,6 @@
 }
 
 
-
-Declaring Custom Properties
-
-
-/* Setting fallback defaults for IE */
-/* html {
-    font: 1em/1.5 'Avenir Next', -apple-system, 'Helvetica Neue', Arial, sans-serif;
-    text-rendering: optimizelegibility;
-    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: #fafbfc;
-    color: #232425;
-} */
-/* body, button, input, optgroup, select, textarea {
-    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-} */
-/* body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-} */
-
-/* body * {
-    box-sizing: border-box;
-} */
-
-
-/* Remove the 300ms tap-delay */
 
 .atag {
     color: cornflowerblue;
@@ -66,12 +44,12 @@ Declaring Custom Properties
 }
 
 .h3 {
-    font-size: 0.75em;
+    font-size: 1em;
 }
 
 .h4 {
     font-size: 0.50em;
-    text-transform: uppercase;
+   
 }
 
 .h5 {
@@ -80,22 +58,23 @@ Declaring Custom Properties
 
 .h6 {
     font-size: 0.25em;
-    text-transform: uppercase;
+   
 }
 
 .p {
     font-size: 1.125em;
-    margin: 0;
+    margin:1em !important;
+    /* margin: 0; */
 }
 
-
-
-.code {
-    padding: .125em;
-    background: #edefec;
-    color: black;
+.myTable {
+    font-size: 1.125em !important;
+    font-weight: 900 !important;
+    margin:1em !important;
+    width: 70%;
+    border: 1px solid #f4f4f4;
+   
 }
-
 .img {
     height: auto;
     max-height: 550px;
