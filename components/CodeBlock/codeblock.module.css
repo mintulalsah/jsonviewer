@@ -1,0 +1,132 @@
+.footer {
+  bottom: 0 !important;
+  background: rgb(46, 46, 46) !important;
+  color: white !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Bottom - copyright and legal stuff */
+
+.info {
+  padding: 1rem !important;
+  display: flex !important;
+  /* height: 50px; */
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgb(29, 29, 29) !important;
+}
+
+.link_tag{
+  text-decoration: none !important;
+  color: white !important;
+}
+.legal {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+.legal > a {
+  margin-right: 15px !important;
+}
+
+/* Middle - social media links */
+
+.social {
+  padding: 1.5rem 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.social i {
+  font-size: 1.4rem !important;
+  margin: 2px 8px !important;
+  cursor: pointer;
+}
+
+.social:before {
+  position: absolute !important;
+  content: "";
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.192) !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) !important;
+}
+
+/* Top - pages, email newsletter form ... */
+
+.top {
+  padding: 2rem 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.footer .top .pages {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .top .pages ul {
+  margin: 20px !important;
+}
+
+.footer .top .pages ul li {
+  margin: 5px !important;
+}
+
+.footer .newsletter h3 {
+  margin-bottom: 10px !important;
+}
+.footer .newsletter form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .footer .top {
+    flex-direction: column;
+  }
+  .footer .top .newsletter {
+    padding-top: 1rem;
+  }
+  .footer .top .pages ul {
+    margin: 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer .top .pages {
+    flex-wrap: wrap;
+  }
+
+  .footer .info {
+    flex-direction: column;
+  }
+
+  .footer .info > .copyright {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .footer .top .pages {
+    flex-direction: column;
+  }
+
+  .footer .info .legal {
+    justify-content: center;
+  }
+
+  .footer .info .legal a {
+    margin: 0;
+    text-align: center;
+  }
+}

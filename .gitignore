@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/public/sitemap-0.xml
-/public/sitemap.xml
 /.pnp
 .pnp.js
 
