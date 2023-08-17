@@ -37,14 +37,17 @@
 
 .h1 {
     font-size: 2em;
+    color: black;
 }
 
 .h2 {
     font-size: 1.25em;
+    color: black;
 }
 
 .h3 {
     font-size: 1em;
+    color: black;
 }
 
 .h4 {
@@ -54,10 +57,12 @@
 
 .h5 {
     font-size: 0.25em;
+    color: black;
 }
 
 .h6 {
     font-size: 0.25em;
+    color: black;
    
 }
 
@@ -85,7 +90,7 @@
 .header {
     font-family: Palatino, Georgia, 'Times New Roman', serif !important;
     padding: 1.5em !important;
-    background: burlywood !important;
+    background: #b18def !important;
 }
 
 
@@ -257,3 +262,19 @@
         }
     }
 }
+
+.count {
+    color: rgba(0, 0, 0, 0.5); /* Fade color for count */
+    font-weight: bold;
+  }
+  
+  .bold_text {
+    font-weight: bold;
+    color: black; /* Bold text color */
+  }
+
+  
+  
+  
+  
+  

@@ -1,0 +1,25 @@
+/* CsvViewer.css */
+
+.csv_viewer {
+  width: 90%; /* Set the width to 80% */
+  max-height: 500px; /* Set the maximum height to 500px */
+  overflow-y: auto; 
+  }
+  
+  .csv_table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .csv_table th,
+  .csv_table td {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .csv_table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  

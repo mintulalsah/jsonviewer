@@ -7,6 +7,7 @@ import { js_beautify } from "js-beautify";
 import { Box,Button, CircularProgress } from "@mui/material";
 import styles from '../../styles/editor.module.css';
 import Head from "next/head";
+import Image from 'next/image'
 import {
   Table,
   TableHead,
@@ -262,10 +263,19 @@ const AceEditor = dynamic(
               </p>
             </section>
             <figure>
-              <img className={styles.img}
-                src={'/images/json-tree-viewer.png'}
+              {/* <image className={styles.img}
+                src='/images/json-tree-viewer.png'
                 alt="json tree viewer"
-              />
+              /> */}
+               <div style={{ maxWidth: '100%', height: 'auto' }}>
+               <Image
+      src="/images/json-tree-viewer.png"
+      className={styles.img}
+      width={800}
+      height={500}
+      alt="Picture of the author"
+    />
+    </div>
               <p className={styles.p}>
                 Json data is easy for humans to read and write. Json is basically based on
                 javascript programming language,
