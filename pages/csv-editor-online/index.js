@@ -1,6 +1,7 @@
 // pages/csvEditor.js
 
 import CSVEditor from "@/components/CSVEditor";
+import Head from "next/head";
 
 
 export default function CsvEditorPage() {

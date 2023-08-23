@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: true, // (optional)
   transform: async (config, path) => {
     // Array of page names to exclude from the sitemap
-    const excludedPages = ['/format-json-online'];
+    const excludedPages = ['/format-json-online','/csv-editor-online'];
     let priority = config.priority; // Default priority from configuration
     // Check if the path exists in the excludedPages array
     if (excludedPages.indexOf(path) !== -1) {

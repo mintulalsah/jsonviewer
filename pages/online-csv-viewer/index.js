@@ -61,7 +61,7 @@ const CsvViewer = () => {
           <section className={styles.introduction}>
             <h2 className={styles.h2}>Introducing new Online CSV Viewer: Seamlessly View and Edit CSV Files</h2>
             <p className={styles.p}>
-              In current fast digital world, managing data is required everywhere to work on any project in various industries. One most common data storage file is CSV format. It widely used because it's very easy to maintain data in row  and column format.
+              In current fast digital world, managing data is required everywhere to work on any project in various industries. One most common data storage file is CSV format. It widely used because it is very easy to maintain data in row  and column format.
             </p>
             <p className={styles.p}>
               Make much better experience of data management, we  made our CSV viewer Online. By using this powerful tool you can easily view, edit and after making changes in CSV file you can download your updated CSV files directly from your web browser.
